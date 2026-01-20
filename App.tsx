@@ -350,7 +350,8 @@ const InteractiveFeatures = () => {
               onClick={() => setActiveTab(i)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all ${activeTab === i ? 'bg-primary-500 text-white shadow-lg' : 'bg-primary-50 text-primary-400 hover:bg-primary-100'}`}
             >
-              {React.cloneElement(f.icon as React.ReactElement, { className: "w-4 h-4" })}
+              {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
+              {React.cloneElement(f.icon as React.ReactElement<any>, { className: "w-4 h-4" })}
               <span>{f.title}</span>
             </button>
           ))}
@@ -359,7 +360,8 @@ const InteractiveFeatures = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center bg-neutral-background rounded-[40px] p-8 lg:p-20 border border-primary-50 shadow-card">
           <div>
             <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
-              {React.cloneElement(features[activeTab].icon as React.ReactElement, { className: "w-8 h-8" })}
+              {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
+              {React.cloneElement(features[activeTab].icon as React.ReactElement<any>, { className: "w-8 h-8" })}
             </div>
             <h3 className="text-3xl font-bold text-primary-500 mb-6">{features[activeTab].title}</h3>
             <p className="text-lg text-neutral-text mb-8 leading-relaxed">{features[activeTab].desc}</p>
@@ -594,7 +596,8 @@ const IntegrationsSection = () => (
         ].map(item => (
           <div key={item.name} className="p-8 bg-neutral-background rounded-2xl border border-primary-50 hover:shadow-card-hover transition-all">
             <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent-500 mb-6 border border-primary-50">
-               {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6" })}
+               {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
+               {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-6 h-6" })}
             </div>
             <h4 className="text-lg font-bold text-primary-500 mb-2">{item.name}</h4>
             <p className="text-sm text-neutral-text leading-relaxed">{item.d}</p>
@@ -868,4 +871,3 @@ export default function App() {
     </div>
   );
 }
-
