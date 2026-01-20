@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReHub | NYC Property Compliance Powerhouse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#e6edf4',
+                100: '#ccdbe9',
+                200: '#99b7d3',
+                300: '#6693bd',
+                400: '#336fa7',
+                500: '#002448', // Redocs Navy Blue
+                600: '#001d3a',
+                700: '#00162b',
+                800: '#000f1d',
+                900: '#00070e',
+              },
+              accent: {
+                500: '#3b82f6', // Accent Blue
+                600: '#2563eb',
+              },
+              semantic: {
+                success: '#22c55e',
+                warning: '#f59e0b',
+                error: '#ef4444',
+                info: '#06b6d4'
+              },
+              neutral: {
+                background: '#f8f9fa',
+                text: '#495057',
+              }
+            },
+            borderRadius: {
+              'md': '10px',
+              'lg': '12px',
+              '2xl': '20px',
+            },
+            boxShadow: {
+              'card': '0 1px 3px rgba(0, 0, 0, 0.05)',
+              'card-hover': '0 8px 16px -4px rgba(0, 0, 0, 0.12)',
+              'modal': '0 24px 48px -12px rgba(0, 0, 0, 0.18)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #495057;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #002448 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-neutral-text overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>
