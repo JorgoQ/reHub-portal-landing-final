@@ -240,10 +240,10 @@ const FinancialImpactSection = () => {
           </p>
         </div>
         
-        {/* pixels-start alignment fix */}
+        {/* Alignment Refinement: Header text matches the top of the white card exactly */}
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div className="flex flex-col">
-            <h3 className="text-2xl font-bold mb-10 flex items-center tracking-wide leading-none pt-2">
+          <div className="flex flex-col"> 
+            <h3 className="text-2xl font-bold flex items-center tracking-wide leading-none h-[42px] mb-8">
               <AlertTriangle className="mr-4 text-semantic-warning w-8 h-8" /> Avoidable Annual Penalties
             </h3>
             
@@ -338,7 +338,7 @@ const InteractiveFeatures = () => {
       title: "Document Vault",
       icon: <FileText />,
       desc: "Centralized AES-256 encrypted storage for all certifications and audits.",
-      img: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200"
+      img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200"
     },
     {
       title: "Vendor Network",
@@ -412,8 +412,8 @@ const BulkOperationsSection = () => (
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
           <div className="relative group">
-             {/* Updated with a high-res verified dashboard screenshot image */}
-             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" alt="Bulk Portfolio Management Dashboard" className="rounded-3xl shadow-modal border-8 border-primary-50 transition-transform group-hover:scale-[1.02]" />
+             {/* Fixing missing/broken screenshot with a verified high-res dashboard stock image */}
+             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Bulk Portfolio Management Dashboard" className="rounded-3xl shadow-modal border-8 border-primary-50 transition-transform group-hover:scale-[1.02]" />
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur p-8 rounded-[32px] shadow-2xl border border-primary-100 w-72">
                 <div className="flex items-center justify-between mb-6">
                    <div className="font-bold text-primary-500 text-lg">23 Properties Selected</div>
@@ -584,38 +584,6 @@ const MultiViewShowcase = () => {
     </section>
   );
 };
-
-const IntegrationsSection = () => (
-  <section className="py-24 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6 text-center">Seamlessly Connected</h2>
-        <p className="text-lg text-neutral-text max-w-2xl mx-auto text-center opacity-80">ReHub integrates with your existing tech stack. No data silos. Everything syncs automatically.</p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { name: "QuickBooks", d: "Real-time invoice sync and bulk payments.", icon: <DollarSign /> },
-          { name: "PandaDoc", d: "Automated e-signing and auto-stamping.", icon: <FileText /> },
-          { name: "Energy Star", d: "LL84 benchmarking automation.", icon: <Zap /> },
-          { name: "HubSpot", d: "Proposal tracking and CRM sync.", icon: <Users /> },
-          { name: "OpenAI GPT-4", d: "Natural language ReBot intelligence.", icon: <Bot /> },
-          { name: "Google Calendar", d: "Inspection scheduling & reminders.", icon: <Calendar /> },
-          { name: "Supabase", d: "Enterprise-grade database security.", icon: <ShieldCheck /> },
-          { name: "Stripe", d: "Secure payment method storage.", icon: <Globe /> }
-        ].map(item => (
-          <div key={item.name} className="p-8 bg-neutral-background rounded-3xl border border-primary-50 hover:shadow-card-hover hover:-translate-y-1 transition-all">
-            <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-accent-500 mb-6 border border-primary-50">
-               {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-7 h-7" })}
-            </div>
-            <h4 className="text-xl font-bold text-primary-500 mb-2">{item.name}</h4>
-            <p className="text-sm text-neutral-text leading-relaxed font-medium opacity-80">{item.d}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 const ComparisonTable = () => (
   <section className="py-24 bg-neutral-background">
@@ -870,7 +838,6 @@ export default function App() {
          <ComplianceGrid />
          <CustomerSuccessStory />
          <MultiViewShowcase />
-         <IntegrationsSection />
          <ComparisonTable />
          <ContactForm />
          <FAQSection />
