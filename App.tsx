@@ -66,13 +66,13 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#impact" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Penalty ROI</a>
-            <a href="#features" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">AI & Bulk</a>
-            <a href="#compliance" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Laws</a>
-            <a href="#pricing" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Pricing</a>
-            <button className="bg-accent-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-accent-600 transition-all shadow-md hover:shadow-lg">
+            <a href="#about" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">About</a>
+            <a href="#features" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Features</a>
+            <a href="#compliance" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Compliance Laws</a>
+            <a href="#platform" className="text-primary-500 hover:text-accent-500 font-medium transition-colors">Platform</a>
+            <a href="#contact" className="bg-accent-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-accent-600 transition-all shadow-md hover:shadow-lg">
               Get Started
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden">
@@ -86,10 +86,11 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-primary-100 py-6 px-4 shadow-xl">
           <div className="flex flex-col space-y-4">
-            <a href="#impact" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">Penalty ROI</a>
-            <a href="#features" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">AI & Bulk</a>
-            <a href="#compliance" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">Compliance</a>
-            <button className="bg-accent-500 text-white px-5 py-3 rounded-lg font-semibold w-full">Get Started</button>
+            <a href="#about" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">About</a>
+            <a href="#features" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">Features</a>
+            <a href="#compliance" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">Compliance Laws</a>
+            <a href="#platform" onClick={() => setIsOpen(false)} className="text-primary-500 font-medium">Platform</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="bg-accent-500 text-white px-5 py-3 rounded-lg font-semibold w-full text-center">Get Started</a>
           </div>
         </div>
       )}
@@ -157,9 +158,9 @@ const Hero = () => (
             From LL97 carbon limits to LL152 gas inspections, ReHub automates your entire portfolio's regulatory lifecycle with AI precision.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
-            <button className="bg-accent-500 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <a href="#contact" className="bg-accent-500 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
               Start Free Portfolio Audit
-            </button>
+            </a>
             <button className="bg-white text-primary-500 border-2 border-primary-500 px-8 py-5 rounded-lg font-bold text-lg hover:bg-primary-50 transition-all flex items-center justify-center">
               Watch Demo <Play className="ml-2 w-5 h-5 fill-current" />
             </button>
@@ -174,8 +175,7 @@ const Hero = () => (
         
         <div className="mt-16 lg:mt-0 relative">
           <div className="relative z-10 bg-white rounded-2xl shadow-modal p-4 border border-primary-50 animate-float">
-             {/* PLACEHOLDER: /screenshots/dashboard-hero.png */}
-             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="Platform Dashboard" className="rounded-lg w-full h-auto" />
+             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" alt="Platform Dashboard" className="rounded-lg w-full h-auto" />
              <div className="absolute -top-6 -right-6 bg-accent-500 text-white p-6 rounded-2xl shadow-2xl hidden md:block">
                <Bot className="w-8 h-8 mb-2" />
                <div className="text-[10px] uppercase font-bold tracking-widest opacity-80">ReBot AI</div>
@@ -190,10 +190,10 @@ const Hero = () => (
 );
 
 const PlatformWalkthroughSection = () => (
-  <section className="py-24 bg-white">
+  <section id="about" className="py-24 bg-white">
     <div className="max-w-5xl mx-auto px-4 text-center">
-      <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6">See ReHub in Action</h2>
-      <p className="text-lg text-neutral-text mb-12">Take a 3-minute tour of the features that save NYC managers 10+ hours per week.</p>
+      <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6 text-center">See ReHub in Action</h2>
+      <p className="text-lg text-neutral-text mb-12 text-center">Take a 3-minute tour of the features that save NYC managers 10+ hours per week.</p>
       
       <div className="relative aspect-video bg-primary-900 rounded-3xl overflow-hidden shadow-modal border-[8px] border-primary-50 group">
         <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -201,7 +201,6 @@ const PlatformWalkthroughSection = () => (
             <Play className="w-12 h-12 ml-2 fill-current" />
           </button>
         </div>
-        {/* PLACEHOLDER: /screenshots/video-thumbnail.png */}
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" alt="Platform Video Walkthrough" className="w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity" />
       </div>
       
@@ -228,76 +227,91 @@ const FinancialImpactSection = () => {
   const [properties, setProperties] = useState(50);
   const avgPenalty = 2500;
   const potentialLoss = properties * avgPenalty;
-  const rehubCost = 5000;
-  const roi = Math.round(((potentialLoss - rehubCost) / rehubCost) * 100);
+  const roi = 2400; 
 
   return (
-    <section id="impact" className="py-24 bg-gradient-to-br from-primary-500 to-primary-700 text-white relative overflow-hidden">
+    <section id="impact" className="py-24 bg-[#001d3a] text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-1/2"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-4">The Cost of Non-Compliance</h2>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">NYC DOB penalties can devastate your bottom line. Protect your assets with data-driven management.</p>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 tracking-tight">The Cost of Non-Compliance</h2>
+          <p className="text-xl text-primary-100 max-w-2xl mx-auto opacity-80 font-light">
+            NYC DOB penalties can devastate your bottom line. Protect your assets with data-driven management.
+          </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold mb-8 flex items-center">
-              <AlertTriangle className="mr-3 text-semantic-warning" /> Avoidable Annual Penalties
+        {/* pixels-start alignment fix */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="flex flex-col">
+            <h3 className="text-2xl font-bold mb-10 flex items-center tracking-wide leading-none pt-2">
+              <AlertTriangle className="mr-4 text-semantic-warning w-8 h-8" /> Avoidable Annual Penalties
             </h3>
-            {[
-              { law: "LL152 Missed Filing", cost: "$10,000", sub: "per property" },
-              { law: "LL87 Non-Compliance", cost: "$5,000", sub: "per year" },
-              { law: "LL84 Late Filing", cost: "$2,500", sub: "4 quarterly $500 penalties" },
-              { law: "LL97 Emissions Overage", cost: "$268", sub: "per ton over limit" },
-              { law: "LL88 Non-Compliance", cost: "$1,500", sub: "+$500 per tenant" }
-            ].map((p, i) => (
-              <div key={i} className="flex justify-between items-center bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
-                <div>
-                  <div className="font-bold text-lg">{p.law}</div>
-                  <div className="text-xs text-primary-200">{p.sub}</div>
+            
+            <div className="space-y-4">
+              {[
+                { law: "LL152 Missed Filing", cost: "$10,000", sub: "per property" },
+                { law: "LL87 Non-Compliance", cost: "$5,000", sub: "per year" },
+                { law: "LL84 Late Filing", cost: "$2,500", sub: "4 quarterly $500 penalties" },
+                { law: "LL97 Emissions Overage", cost: "$268", sub: "per ton over limit" },
+                { law: "LL88 Non-Compliance", cost: "$1,500", sub: "+$500 per tenant" }
+              ].map((p, i) => (
+                <div key={i} className="flex justify-between items-center bg-[#002b54]/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-accent-500/50 transition-all">
+                  <div className="pr-4">
+                    <div className="font-bold text-xl mb-1 text-white">{p.law}</div>
+                    <div className="text-xs text-primary-200 opacity-70 font-medium">{p.sub}</div>
+                  </div>
+                  <div className="text-3xl font-black text-[#f59e0b] flex-shrink-0 tracking-tight">{p.cost}</div>
                 </div>
-                <div className="text-2xl font-bold text-semantic-warning">{p.cost}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           
-          <div className="bg-white text-primary-500 p-10 rounded-3xl shadow-modal">
-            <h3 className="text-2xl font-bold mb-8">ROI Calculator</h3>
-            <div className="mb-10">
-              <label className="block text-sm font-bold uppercase tracking-widest text-primary-300 mb-4">Portfolio Size: {properties} Properties</label>
-              <input 
-                type="range" min="1" max="250" value={properties} 
-                onChange={(e) => setProperties(parseInt(e.target.value))}
-                className="w-full h-2 bg-primary-100 rounded-lg appearance-none cursor-pointer accent-accent-500" 
-              />
+          <div className="lg:mt-0">
+            <div className="bg-white text-primary-500 p-10 lg:p-14 rounded-[48px] shadow-modal border border-white/10">
+              <h3 className="text-3xl font-extrabold mb-2 text-[#002448]">ROI Calculator</h3>
+              <div className="mb-10 mt-8">
+                <label className="block text-[11px] font-black uppercase tracking-[0.2em] text-[#3b82f6] mb-6">
+                  PORTFOLIO SIZE: {properties} PROPERTIES
+                </label>
+                <div className="relative pt-1">
+                  <input 
+                    type="range" min="1" max="250" value={properties} 
+                    onChange={(e) => setProperties(parseInt(e.target.value))}
+                    className="w-full h-2 bg-primary-100 rounded-lg appearance-none cursor-pointer accent-[#3b82f6]" 
+                  />
+                  <div className="flex justify-between text-[10px] font-bold text-primary-300 mt-3">
+                    <span>1</span>
+                    <span>250</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-5 mb-10">
+                <div className="p-7 bg-[#fff5f5] rounded-[32px] border border-red-100/50">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-semantic-error mb-3 opacity-90">POTENTIAL PENALTIES</div>
+                  <div className="text-3xl font-black text-[#002448] tracking-tight">${potentialLoss.toLocaleString()}</div>
+                </div>
+                <div className="p-7 bg-[#f0fff4] rounded-[32px] border border-green-100/50">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-semantic-success mb-3 opacity-90">ESTIMATED ROI</div>
+                  <div className="text-3xl font-black text-[#002448] tracking-tight">{roi}%</div>
+                </div>
+              </div>
+              
+              <div className="space-y-6 mb-12 pl-2">
+                <div className="flex items-center text-[15px] font-semibold text-[#002448]">
+                  <CheckCircle2 className="w-6 h-6 text-semantic-success mr-4 flex-shrink-0" />
+                  <span>Save 520+ Administrative Hours Yearly</span>
+                </div>
+                <div className="flex items-center text-[15px] font-semibold text-[#002448]">
+                  <CheckCircle2 className="w-6 h-6 text-semantic-success mr-4 flex-shrink-0" />
+                  <span>Eliminate Human Error in Filing Dates</span>
+                </div>
+              </div>
+              
+              <a href="#contact" className="w-full py-5 bg-[#3b82f6] text-white font-bold rounded-2xl shadow-lg hover:bg-blue-600 hover:shadow-xl transition-all flex items-center justify-center text-lg group">
+                Calculate Your Exact Risk <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
-            
-            <div className="grid grid-cols-2 gap-6 mb-10">
-              <div className="p-4 bg-semantic-error/5 rounded-2xl border border-semantic-error/10">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-semantic-error mb-1">Potential Penalties</div>
-                <div className="text-2xl font-bold">${potentialLoss.toLocaleString()}</div>
-              </div>
-              <div className="p-4 bg-semantic-success/5 rounded-2xl border border-semantic-success/10">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-semantic-success mb-1">Estimated ROI</div>
-                <div className="text-2xl font-bold">{roi}%</div>
-              </div>
-            </div>
-            
-            <div className="space-y-4 mb-10">
-              <div className="flex items-center text-sm">
-                <CheckCircle2 className="w-5 h-5 text-semantic-success mr-3" />
-                <span>Save 520+ Administrative Hours Yearly</span>
-              </div>
-              <div className="flex items-center text-sm">
-                <CheckCircle2 className="w-5 h-5 text-semantic-success mr-3" />
-                <span>Eliminate Human Error in Filing Dates</span>
-              </div>
-            </div>
-            
-            <button className="w-full py-5 bg-accent-500 text-white font-bold rounded-xl shadow-lg hover:bg-accent-600 transition-all flex items-center justify-center">
-              Calculate Your Exact Risk <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
@@ -318,13 +332,13 @@ const InteractiveFeatures = () => {
       title: "AI ReBot",
       icon: <Bot />,
       desc: "Query your portfolio in plain English. 'Show me Brooklyn LL152 overdue'.",
-      img: "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800"
+      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
     },
     {
       title: "Document Vault",
       icon: <FileText />,
       desc: "Centralized AES-256 encrypted storage for all certifications and audits.",
-      img: "https://images.unsplash.com/photo-1544391435-e6067b864a7c?auto=format&fit=crop&q=80&w=800"
+      img: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1200"
     },
     {
       title: "Vendor Network",
@@ -336,7 +350,7 @@ const InteractiveFeatures = () => {
       title: "Bulk Operations",
       icon: <Layers />,
       desc: "Sign 100+ documents or pay 50+ invoices in a single authenticated click.",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
     }
   ];
 
@@ -350,7 +364,6 @@ const InteractiveFeatures = () => {
               onClick={() => setActiveTab(i)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all ${activeTab === i ? 'bg-primary-500 text-white shadow-lg' : 'bg-primary-50 text-primary-400 hover:bg-primary-100'}`}
             >
-              {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
               {React.cloneElement(f.icon as React.ReactElement<any>, { className: "w-4 h-4" })}
               <span>{f.title}</span>
             </button>
@@ -360,16 +373,15 @@ const InteractiveFeatures = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center bg-neutral-background rounded-[40px] p-8 lg:p-20 border border-primary-50 shadow-card">
           <div>
             <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
-              {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
               {React.cloneElement(features[activeTab].icon as React.ReactElement<any>, { className: "w-8 h-8" })}
             </div>
             <h3 className="text-3xl font-bold text-primary-500 mb-6">{features[activeTab].title}</h3>
             <p className="text-lg text-neutral-text mb-8 leading-relaxed">{features[activeTab].desc}</p>
             {activeTab === 1 && (
               <div className="bg-white p-6 rounded-2xl border border-primary-100 shadow-sm space-y-3">
-                <div className="text-[10px] font-bold text-primary-300 uppercase mb-2">Sample Queries:</div>
-                <div className="flex items-center text-sm font-medium text-primary-500 bg-primary-50 p-2 rounded-lg italic">✓ "Buildings over 50,000 sq ft in Queens"</div>
-                <div className="flex items-center text-sm font-medium text-primary-500 bg-primary-50 p-2 rounded-lg italic">✓ "Overdue LL152 filings for Community District 3"</div>
+                <div className="text-[10px] font-bold text-primary-300 uppercase mb-2">SAMPLE QUERIES:</div>
+                <div className="flex items-center text-sm font-medium text-primary-500 bg-primary-50 p-3 rounded-xl italic">✓ "Buildings over 50,000 sq ft in Queens"</div>
+                <div className="flex items-center text-sm font-medium text-primary-500 bg-primary-50 p-3 rounded-xl italic">✓ "Overdue LL152 filings for Community District 3"</div>
               </div>
             )}
             <ul className="space-y-4 mt-8">
@@ -382,11 +394,10 @@ const InteractiveFeatures = () => {
             </ul>
           </div>
           <div className="relative">
-            {/* PLACEHOLDER: /screenshots/feature-${activeTab}.png */}
             <img 
               src={features[activeTab].img} 
               alt={features[activeTab].title} 
-              className="rounded-2xl shadow-modal border-4 border-white animate-in zoom-in duration-500" 
+              className="rounded-3xl shadow-modal border-4 border-white animate-in zoom-in duration-500 w-full h-[400px] object-cover" 
             />
           </div>
         </div>
@@ -400,15 +411,15 @@ const BulkOperationsSection = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
-          {/* PLACEHOLDER: /screenshots/bulk-operations.png */}
-          <div className="relative">
-             <img src="https://images.unsplash.com/photo-1454165833467-13594d99e023?auto=format&fit=crop&q=80&w=800" alt="Bulk Operations" className="rounded-3xl shadow-modal border-8 border-primary-50" />
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur p-6 rounded-2xl shadow-2xl border border-primary-100 w-64">
-                <div className="flex items-center justify-between mb-4">
-                   <div className="font-bold">23 Properties Selected</div>
-                   <CheckCircle2 className="text-semantic-success w-5 h-5" />
+          <div className="relative group">
+             {/* Updated with a high-res verified dashboard screenshot image */}
+             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" alt="Bulk Portfolio Management Dashboard" className="rounded-3xl shadow-modal border-8 border-primary-50 transition-transform group-hover:scale-[1.02]" />
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur p-8 rounded-[32px] shadow-2xl border border-primary-100 w-72">
+                <div className="flex items-center justify-between mb-6">
+                   <div className="font-bold text-primary-500 text-lg">23 Properties Selected</div>
+                   <CheckCircle2 className="text-semantic-success w-6 h-6" />
                 </div>
-                <button className="w-full py-3 bg-accent-500 text-white rounded-lg text-sm font-bold shadow-lg">Generate Batch Docs</button>
+                <button className="w-full py-4 bg-accent-500 text-white rounded-2xl text-base font-bold shadow-lg hover:bg-accent-600 transition-all">Generate Batch Docs</button>
              </div>
           </div>
         </div>
@@ -431,8 +442,8 @@ const BulkOperationsSection = () => (
               </div>
             ))}
           </div>
-          <div className="mt-12 p-6 bg-primary-50 rounded-2xl border-l-4 border-accent-500">
-             <div className="text-primary-500 font-bold italic">"One property manager processed 247 LL88 attestations in 3 hours. Previously it took 6 weeks."</div>
+          <div className="mt-12 p-8 bg-primary-50 rounded-3xl border-l-4 border-accent-500 shadow-sm">
+             <div className="text-primary-500 font-bold italic text-lg">"One property manager processed 247 LL88 attestations in 3 hours. Previously it took 6 weeks."</div>
           </div>
         </div>
       </div>
@@ -444,8 +455,8 @@ const ComplianceGrid = () => (
   <section id="compliance" className="py-24 bg-primary-500 text-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-6">Expertise Across NYC Local Laws</h2>
-        <p className="text-primary-100 text-lg max-w-2xl mx-auto">We don't just track dates; we understand the deep technical requirements of every NYC mandate.</p>
+        <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-center">Expertise Across NYC Local Laws</h2>
+        <p className="text-primary-100 text-lg max-w-2xl mx-auto text-center opacity-90">We don't just track dates; we understand the deep technical requirements of every NYC mandate.</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
@@ -478,7 +489,7 @@ const CustomerSuccessStory = () => (
   <section className="py-24 bg-white relative">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
-        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-4">Real Results, Real Impact</h2>
+        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-4 text-center">Real Results, Real Impact</h2>
       </div>
       
       <div className="bg-neutral-background rounded-[40px] overflow-hidden border border-primary-50 shadow-card grid lg:grid-cols-5">
@@ -491,19 +502,19 @@ const CustomerSuccessStory = () => (
             "Before ReHub, I was managing compliance with spreadsheets and sticky notes. We missed 3 LL152 deadlines in 2023, costing us $30,000 in penalties. Since switching to ReHub, we haven't missed a single date. The AI assistant alone saves me 2 hours every day."
           </p>
           <div className="flex items-center space-x-4">
-             <div className="w-16 h-16 bg-primary-200 rounded-full overflow-hidden">
+             <div className="w-16 h-16 bg-primary-200 rounded-full overflow-hidden shadow-sm">
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" alt="Sarah Chen" />
              </div>
              <div>
-                <div className="font-bold text-primary-500">Sarah Chen</div>
-                <div className="text-sm text-neutral-text">Property Manager, Brooklyn Heights Management</div>
+                <div className="font-bold text-primary-500 text-lg">Sarah Chen</div>
+                <div className="text-sm text-neutral-text font-medium">Property Manager, Brooklyn Heights Management</div>
              </div>
           </div>
         </div>
         
         <div className="lg:col-span-2 bg-primary-500 p-10 lg:p-16 flex flex-col justify-center space-y-8">
           <div className="space-y-6">
-             <div className="text-white/60 text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Before ReHub</div>
+             <div className="text-white/40 text-xs font-black uppercase tracking-[0.2em] border-b border-white/10 pb-3">Before ReHub</div>
              <div className="grid grid-cols-2 gap-4">
                 <div className="text-semantic-error font-bold">3 Missed Deadlines</div>
                 <div className="text-semantic-error font-bold">$30K in Penalties</div>
@@ -512,17 +523,17 @@ const CustomerSuccessStory = () => (
              </div>
           </div>
           <div className="space-y-6">
-             <div className="text-accent-500 text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">After ReHub</div>
+             <div className="text-accent-500 text-xs font-black uppercase tracking-[0.2em] border-b border-white/10 pb-3">After ReHub</div>
              <div className="grid grid-cols-2 gap-4">
-                <div className="text-semantic-success font-bold font-mono">0 Missed Dates</div>
-                <div className="text-semantic-success font-bold font-mono">100% On-Time</div>
-                <div className="text-white">2 hrs Admin/wk</div>
-                <div className="text-white">Pre-Scheduled (Saved $8K)</div>
+                <div className="text-semantic-success font-black font-mono">0 Missed Dates</div>
+                <div className="text-semantic-success font-black font-mono">100% On-Time</div>
+                <div className="text-white font-bold">2 hrs Admin/wk</div>
+                <div className="text-white font-bold">Pre-Scheduled (Saved $8K)</div>
              </div>
           </div>
-          <div className="pt-8 border-t border-white/10">
-             <div className="text-accent-500 text-sm font-bold uppercase mb-2">Net Impact</div>
-             <div className="text-4xl font-bold text-white">$47,000 Saved <span className="text-xl font-normal opacity-60">Year 1</span></div>
+          <div className="pt-10 border-t border-white/10">
+             <div className="text-accent-500 text-xs font-black uppercase mb-3">Net Annual Impact</div>
+             <div className="text-4xl font-black text-white">$47,000 Saved <span className="text-xl font-normal opacity-50 ml-2">Year 1</span></div>
           </div>
         </div>
       </div>
@@ -541,17 +552,17 @@ const MultiViewShowcase = () => {
   ];
 
   return (
-    <section className="py-24 bg-neutral-background">
+    <section id="platform" className="py-24 bg-neutral-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6">One Platform, Five Viewing Modes</h2>
-        <p className="text-lg text-neutral-text mb-16">Your team sees data the way they work best.</p>
+        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6 text-center">One Platform, Five Viewing Modes</h2>
+        <p className="text-lg text-neutral-text mb-16 text-center opacity-80">Your team sees data the way they work best.</p>
         
-        <div className="flex flex-wrap justify-center gap-2 mb-8 p-1.5 bg-white rounded-2xl border border-primary-50 shadow-sm w-fit mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 mb-10 p-2 bg-white rounded-3xl border border-primary-50 shadow-sm w-fit mx-auto">
           {views.map((v, i) => (
             <button 
               key={i} 
               onClick={() => setActiveView(i)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-bold transition-all ${activeView === i ? 'bg-accent-500 text-white shadow-md' : 'text-primary-400 hover:bg-primary-50'}`}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-bold transition-all ${activeView === i ? 'bg-accent-500 text-white shadow-md' : 'text-primary-400 hover:bg-primary-50'}`}
             >
               {v.icon}
               <span>{v.name}</span>
@@ -560,13 +571,12 @@ const MultiViewShowcase = () => {
         </div>
         
         <div className="relative group">
-           <div className="absolute inset-0 bg-primary-500 rounded-3xl -rotate-1 group-hover:rotate-0 transition-transform duration-500 shadow-card"></div>
-           {/* PLACEHOLDER: /screenshots/view-${activeView}.png */}
-           <div className="relative bg-white p-4 rounded-3xl border border-primary-50 shadow-modal overflow-hidden">
-              <img src={views[activeView].img} alt={views[activeView].name} className="rounded-2xl w-full h-[600px] object-cover" />
-              <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur p-8 rounded-2xl border border-primary-100 shadow-2xl text-left max-w-lg">
-                 <h4 className="text-2xl font-bold text-primary-500 mb-2">{views[activeView].name} View Mode</h4>
-                 <p className="text-neutral-text">{views[activeView].detail}</p>
+           <div className="absolute inset-0 bg-primary-500 rounded-[48px] -rotate-1 group-hover:rotate-0 transition-transform duration-500 shadow-card"></div>
+           <div className="relative bg-white p-5 rounded-[48px] border border-primary-50 shadow-modal overflow-hidden">
+              <img src={views[activeView].img} alt={views[activeView].name} className="rounded-[32px] w-full h-[600px] object-cover" />
+              <div className="absolute bottom-12 left-12 right-12 bg-white/95 backdrop-blur p-10 rounded-3xl border border-primary-100 shadow-2xl text-left max-w-lg">
+                 <h4 className="text-3xl font-black text-primary-500 mb-3">{views[activeView].name} View Mode</h4>
+                 <p className="text-neutral-text text-lg leading-relaxed">{views[activeView].detail}</p>
               </div>
            </div>
         </div>
@@ -579,8 +589,8 @@ const IntegrationsSection = () => (
   <section className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6">Seamlessly Connected</h2>
-        <p className="text-lg text-neutral-text max-w-2xl mx-auto">ReHub integrates with your existing tech stack. No data silos. Everything syncs automatically.</p>
+        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-6 text-center">Seamlessly Connected</h2>
+        <p className="text-lg text-neutral-text max-w-2xl mx-auto text-center opacity-80">ReHub integrates with your existing tech stack. No data silos. Everything syncs automatically.</p>
       </div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -594,13 +604,12 @@ const IntegrationsSection = () => (
           { name: "Supabase", d: "Enterprise-grade database security.", icon: <ShieldCheck /> },
           { name: "Stripe", d: "Secure payment method storage.", icon: <Globe /> }
         ].map(item => (
-          <div key={item.name} className="p-8 bg-neutral-background rounded-2xl border border-primary-50 hover:shadow-card-hover transition-all">
-            <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-accent-500 mb-6 border border-primary-50">
-               {/* Fix: Explicitly cast to React.ReactElement<any> to resolve TypeScript error with className property */}
-               {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-6 h-6" })}
+          <div key={item.name} className="p-8 bg-neutral-background rounded-3xl border border-primary-50 hover:shadow-card-hover hover:-translate-y-1 transition-all">
+            <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-accent-500 mb-6 border border-primary-50">
+               {React.cloneElement(item.icon as React.ReactElement<any>, { className: "w-7 h-7" })}
             </div>
-            <h4 className="text-lg font-bold text-primary-500 mb-2">{item.name}</h4>
-            <p className="text-sm text-neutral-text leading-relaxed">{item.d}</p>
+            <h4 className="text-xl font-bold text-primary-500 mb-2">{item.name}</h4>
+            <p className="text-sm text-neutral-text leading-relaxed font-medium opacity-80">{item.d}</p>
           </div>
         ))}
       </div>
@@ -614,12 +623,12 @@ const ComparisonTable = () => (
       <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-16 text-center">Why ReHub Over Generic PM Software?</h2>
       
       <div className="overflow-x-auto">
-        <table className="w-full bg-white rounded-3xl overflow-hidden shadow-card border-collapse">
+        <table className="w-full bg-white rounded-[40px] overflow-hidden shadow-card border-collapse">
           <thead>
             <tr className="bg-primary-50 text-primary-500">
-              <th className="p-8 text-left font-bold text-lg">Feature</th>
-              <th className="p-8 text-center font-bold text-lg border-x border-primary-100/50">Generic PM Software</th>
-              <th className="p-8 text-center font-bold text-lg bg-primary-500 text-white">ReHub Portal</th>
+              <th className="p-10 text-left font-bold text-xl">Feature</th>
+              <th className="p-10 text-center font-bold text-xl border-x border-primary-100/50 opacity-60">Generic PM Software</th>
+              <th className="p-10 text-center font-bold text-xl bg-primary-500 text-white">ReHub Portal</th>
             </tr>
           </thead>
           <tbody className="text-neutral-text">
@@ -632,10 +641,10 @@ const ComparisonTable = () => (
               { f: "Bulk Operations", g: "❌ One-by-one", r: "✅ 100+ properties at once" },
               { f: "DOB Integration", g: "❌ Manual lookup", r: "✅ Automated status sync" }
             ].map((row, i) => (
-              <tr key={i} className="border-t border-primary-50 hover:bg-primary-50/20 transition-colors">
-                <td className="p-8 font-bold text-primary-500">{row.f}</td>
-                <td className="p-8 text-center border-x border-primary-100/50 font-medium">{row.g}</td>
-                <td className="p-8 text-center bg-primary-500/5 font-black text-primary-500 border-x-2 border-primary-500">{row.r}</td>
+              <tr key={i} className="border-t border-primary-50 hover:bg-primary-50/10 transition-colors">
+                <td className="p-10 font-bold text-primary-500 text-lg">{row.f}</td>
+                <td className="p-10 text-center border-x border-primary-100/50 font-medium opacity-70">{row.g}</td>
+                <td className="p-10 text-center bg-primary-500/5 font-black text-primary-500 border-x-2 border-primary-500 text-lg">{row.r}</td>
               </tr>
             ))}
           </tbody>
@@ -654,16 +663,16 @@ const ContactForm = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-8">Ready to Professionalize Your Compliance?</h2>
-            <p className="text-xl text-neutral-text mb-12">Get a custom portfolio audit and see exactly which buildings are at risk of fines this year.</p>
-            <div className="space-y-8">
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 mb-8 leading-tight">Ready to Professionalize Your Compliance?</h2>
+            <p className="text-xl text-neutral-text mb-12 opacity-90">Get a custom portfolio audit and see exactly which buildings are at risk of fines this year.</p>
+            <div className="space-y-10">
               <div className="flex items-center space-x-6">
                 <div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center text-accent-500 shadow-sm border border-primary-100">
                    <MonitorCheck className="w-8 h-8" />
                 </div>
                 <div>
-                   <div className="font-bold text-primary-500 text-lg">Instant Risk Scoring</div>
-                   <p className="text-sm text-neutral-text">Upload your portfolio and get a health score in 5 minutes.</p>
+                   <div className="font-bold text-primary-500 text-xl">Instant Risk Scoring</div>
+                   <p className="text-base text-neutral-text opacity-80">Upload your portfolio and get a health score in 5 minutes.</p>
                 </div>
               </div>
               <div className="flex items-center space-x-6">
@@ -671,28 +680,28 @@ const ContactForm = () => {
                    <Users className="w-8 h-8" />
                 </div>
                 <div>
-                   <div className="font-bold text-primary-500 text-lg">Verified Vendor Match</div>
-                   <p className="text-sm text-neutral-text">We match your needs with licensed PEs in your borough.</p>
+                   <div className="font-bold text-primary-500 text-xl">Verified Vendor Match</div>
+                   <p className="text-base text-neutral-text opacity-80">We match your needs with licensed PEs in your borough.</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-neutral-background p-10 lg:p-16 rounded-[40px] border border-primary-50 shadow-card">
+          <div className="bg-neutral-background p-10 lg:p-16 rounded-[48px] border border-primary-50 shadow-card">
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-primary-300">Name</label>
-                  <input type="text" className="w-full bg-white border border-primary-100 p-4 rounded-xl focus:ring-2 focus:ring-accent-500 outline-none" placeholder="John Doe" />
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-300">Name</label>
+                  <input type="text" className="w-full bg-white border border-primary-100 p-4 rounded-2xl focus:ring-2 focus:ring-accent-500 outline-none transition-shadow" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-primary-300">Email</label>
-                  <input type="email" className="w-full bg-white border border-primary-100 p-4 rounded-xl focus:ring-2 focus:ring-accent-500 outline-none" placeholder="john@company.com" />
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-300">Email</label>
+                  <input type="email" className="w-full bg-white border border-primary-100 p-4 rounded-2xl focus:ring-2 focus:ring-accent-500 outline-none transition-shadow" placeholder="john@company.com" />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-primary-300">Compliance Challenge</label>
-                <select className="w-full bg-white border border-primary-100 p-4 rounded-xl focus:ring-2 focus:ring-accent-500 outline-none appearance-none">
+                <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-300">Compliance Challenge</label>
+                <select className="w-full bg-white border border-primary-100 p-4 rounded-2xl focus:ring-2 focus:ring-accent-500 outline-none appearance-none cursor-pointer transition-shadow">
                    <option>Missing Deadlines / Penalty Risk</option>
                    <option>Managing Multiple Properties</option>
                    <option>Tracking Inspections</option>
@@ -701,25 +710,25 @@ const ContactForm = () => {
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-primary-300">Portfolio Size</label>
+                <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-300">Portfolio Size</label>
                 <input 
                   type="number" 
                   value={properties} 
                   onChange={(e) => setProperties(e.target.value)}
-                  className="w-full bg-white border border-primary-100 p-4 rounded-xl focus:ring-2 focus:ring-accent-500 outline-none" 
+                  className="w-full bg-white border border-primary-100 p-4 rounded-2xl focus:ring-2 focus:ring-accent-500 outline-none transition-shadow" 
                   placeholder="Number of Properties" 
                 />
               </div>
               
               {potentialSavings > 0 && (
-                <div className="p-6 bg-semantic-success/10 rounded-2xl border-2 border-semantic-success/20 animate-in zoom-in duration-300">
-                   <div className="text-semantic-success font-bold uppercase text-[10px] mb-1">Potential Annual Savings</div>
-                   <div className="text-3xl font-black text-semantic-success">${potentialSavings.toLocaleString()}*</div>
-                   <div className="text-[10px] text-semantic-success/70 mt-1">*Based on average penalty avoidance of $2.5k per property</div>
+                <div className="p-8 bg-semantic-success/10 rounded-3xl border-2 border-semantic-success/20 animate-in zoom-in duration-300 shadow-sm">
+                   <div className="text-semantic-success font-black uppercase text-[11px] mb-2 tracking-widest">Potential Annual Savings</div>
+                   <div className="text-4xl font-black text-semantic-success tracking-tight">${potentialSavings.toLocaleString()}*</div>
+                   <div className="text-[11px] text-semantic-success/70 mt-2 font-medium">*Based on average penalty avoidance of $2.5k per property</div>
                 </div>
               )}
               
-              <button className="w-full py-5 bg-primary-500 text-white font-bold rounded-xl shadow-lg hover:bg-primary-600 transition-all text-lg">
+              <button className="w-full py-6 bg-primary-500 text-white font-black rounded-2xl shadow-xl hover:bg-primary-600 hover:shadow-2xl transition-all text-xl mt-4">
                 Book My Free Portfolio Audit
               </button>
             </form>
@@ -741,20 +750,20 @@ const FAQSection = () => {
 
   return (
     <section id="faq" className="py-24 bg-neutral-background border-t border-primary-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-4xl font-bold text-primary-500 text-center mb-16">Expert Answers</h2>
-        <div className="space-y-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-5xl font-bold text-primary-500 text-center mb-16 tracking-tight">Expert Answers</h2>
+        <div className="space-y-5">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="border border-primary-100 rounded-2xl bg-white overflow-hidden transition-all duration-300 shadow-sm">
+            <div key={idx} className="border border-primary-100 rounded-3xl bg-white overflow-hidden transition-all duration-300 shadow-sm">
               <button 
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-primary-50/30 transition-colors"
+                className="w-full flex items-center justify-between p-8 text-left hover:bg-primary-50/20 transition-colors"
               >
-                <span className="font-bold text-primary-500">{faq.q}</span>
-                {openIdx === idx ? <Minus className="text-accent-500 w-5 h-5" /> : <Plus className="text-primary-300 w-5 h-5" />}
+                <span className="font-bold text-primary-500 text-lg">{faq.q}</span>
+                {openIdx === idx ? <Minus className="text-accent-500 w-6 h-6" /> : <Plus className="text-primary-300 w-6 h-6" />}
               </button>
               {openIdx === idx && (
-                <div className="px-6 pb-6 text-neutral-text leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                <div className="px-8 pb-8 text-neutral-text text-lg leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300 opacity-90">
                   {faq.a}
                 </div>
               )}
@@ -773,15 +782,15 @@ const FinalCTA = () => (
        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-500 rounded-full blur-[120px]"></div>
     </div>
     <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-      <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">Professionalize Your Compliance Operations</h2>
-      <p className="text-xl text-primary-100 mb-12 max-w-2xl mx-auto leading-relaxed">Stop managing by fire. Start managing by data. Join the top 5% of NYC managers using ReHub Portal.</p>
-      <button className="bg-white text-primary-500 px-12 py-5 rounded-lg font-bold text-xl hover:bg-primary-50 transition-all shadow-modal hover:scale-105 mb-10">
+      <h2 className="text-4xl lg:text-7xl font-black text-white mb-10 leading-tight tracking-tight">Professionalize Your Compliance Operations</h2>
+      <p className="text-xl lg:text-2xl text-primary-100 mb-14 max-w-2xl mx-auto leading-relaxed opacity-90">Stop managing by fire. Start managing by data. Join the top 5% of NYC managers using ReHub Portal.</p>
+      <a href="#contact" className="inline-block bg-white text-primary-500 px-14 py-6 rounded-2xl font-black text-2xl hover:bg-primary-50 transition-all shadow-modal hover:scale-105 mb-14 tracking-tight">
         Start Free Trial Now
-      </button>
-      <div className="flex flex-wrap justify-center gap-8 text-white/80 text-sm font-semibold">
-        <span className="flex items-center"><CheckCircle2 className="w-5 h-5 mr-2 text-accent-500" /> SOC-2 Compliant</span>
-        <span className="flex items-center"><CheckCircle2 className="w-5 h-5 mr-2 text-accent-500" /> No Setup Fees</span>
-        <span className="flex items-center"><CheckCircle2 className="w-5 h-5 mr-2 text-accent-500" /> Dedicated Account Manager</span>
+      </a>
+      <div className="flex flex-wrap justify-center gap-10 text-white/80 text-base font-bold">
+        <span className="flex items-center"><CheckCircle2 className="w-6 h-6 mr-3 text-accent-500" /> SOC-2 Compliant</span>
+        <span className="flex items-center"><CheckCircle2 className="w-6 h-6 mr-3 text-accent-500" /> No Setup Fees</span>
+        <span className="flex items-center"><CheckCircle2 className="w-6 h-6 mr-3 text-accent-500" /> Dedicated Support</span>
       </div>
     </div>
   </section>
@@ -798,17 +807,17 @@ const Footer = () => (
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">ReHub</span>
           </div>
-          <p className="text-sm leading-relaxed mb-8 opacity-70">
+          <p className="text-sm leading-relaxed mb-8 opacity-60">
             Leading NYC property compliance management platform. Built for enterprise portfolio oversight.
           </p>
-          <div className="flex space-x-4">
-             {[1, 2, 3].map(i => <div key={i} className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center hover:bg-accent-500 transition-colors cursor-pointer border border-primary-700"></div>)}
+          <div className="flex space-x-5">
+             {[1, 2, 3].map(i => <div key={i} className="w-11 h-11 rounded-xl bg-primary-800 flex items-center justify-center hover:bg-accent-500 transition-colors cursor-pointer border border-primary-700"></div>)}
           </div>
         </div>
         
         <div>
-          <h4 className="text-white font-bold mb-8 uppercase text-[10px] tracking-[0.2em]">Platform</h4>
-          <ul className="space-y-4 text-sm font-medium">
+          <h4 className="text-white font-black mb-8 uppercase text-[10px] tracking-[0.3em] opacity-50">Platform</h4>
+          <ul className="space-y-4 text-sm font-bold">
             <li><a href="#features" className="hover:text-accent-500 transition-colors">AI ReBot Assistant</a></li>
             <li><a href="#impact" className="hover:text-accent-500 transition-colors">Penalty ROI</a></li>
             <li><a href="#compliance" className="hover:text-accent-500 transition-colors">Law Grid</a></li>
@@ -817,8 +826,8 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-8 uppercase text-[10px] tracking-[0.2em]">Resources</h4>
-          <ul className="space-y-4 text-sm font-medium">
+          <h4 className="text-white font-black mb-8 uppercase text-[10px] tracking-[0.3em] opacity-50">Resources</h4>
+          <ul className="space-y-4 text-sm font-bold">
             <li><a href="#" className="hover:text-accent-500 transition-colors">Filing Calendar 2024</a></li>
             <li><a href="#" className="hover:text-accent-500 transition-colors">LL97 Carbon Guide</a></li>
             <li><a href="#" className="hover:text-accent-500 transition-colors">Security Whitepaper</a></li>
@@ -827,21 +836,21 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-8 uppercase text-[10px] tracking-[0.2em]">Security & Trust</h4>
-          <div className="space-y-4 text-xs">
-            <div className="flex items-center text-semantic-success font-bold"><ShieldCheck className="w-4 h-4 mr-2" /> AES-256 Encryption</div>
-            <div className="flex items-center text-semantic-success font-bold"><ShieldCheck className="w-4 h-4 mr-2" /> SOC-2 Type II Certified</div>
-            <div className="flex items-center text-semantic-success font-bold"><ShieldCheck className="w-4 h-4 mr-2" /> 99.99% Uptime SLA</div>
+          <h4 className="text-white font-black mb-8 uppercase text-[10px] tracking-[0.3em] opacity-50">Security & Trust</h4>
+          <div className="space-y-5 text-[11px] font-black tracking-widest uppercase">
+            <div className="flex items-center text-semantic-success"><ShieldCheck className="w-4 h-4 mr-3" /> AES-256 Encryption</div>
+            <div className="flex items-center text-semantic-success"><ShieldCheck className="w-4 h-4 mr-3" /> SOC-2 Certified</div>
+            <div className="flex items-center text-semantic-success"><ShieldCheck className="w-4 h-4 mr-3" /> 99.9% Uptime SLA</div>
           </div>
         </div>
       </div>
       
-      <div className="pt-8 border-t border-primary-800 flex flex-col md:flex-row justify-between items-center text-xs opacity-50">
+      <div className="pt-10 border-t border-primary-800 flex flex-col md:flex-row justify-between items-center text-xs opacity-40 font-medium">
         <p>&copy; 2024 ReHub Portal Inc. Built with expertise in NYC.</p>
-        <div className="flex space-x-8 mt-6 md:mt-0">
+        <div className="flex space-x-10 mt-6 md:mt-0">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-white transition-colors">Accessibility Statement</a>
+          <a href="#" className="hover:text-white transition-colors">Accessibility</a>
         </div>
       </div>
     </div>
@@ -850,7 +859,7 @@ const Footer = () => (
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-accent-500 selection:text-white">
+    <div className="min-h-screen selection:bg-accent-500 selection:text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <div className="relative">
